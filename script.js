@@ -11,7 +11,7 @@ let totalTry = 3;
 function hideAllNotification() {
   wrongNotify.style.display = 'none';
   successNotify.style.display = 'none';
-};
+}
 
 const generateBtn = document.getElementById('generateBtn');
 const generatePin = document.getElementById('showPin');
@@ -21,7 +21,7 @@ generateBtn.addEventListener('click', function(){
     submitBtn.disabled = false;
     submitBtn.style.backgroundColor = 'green';
 
-});
+})
 
 function gettingPin(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -35,7 +35,7 @@ const keyPadNumber = document.querySelector('.numbers');
 keyPadNumber.addEventListener('click', function(e){
   let targetKey = e.target;
   keyPadInput(targetKey);
-});
+})
 
 function keyPadInput(targetKey){
   if(targetKey.classList.contains('button')){
@@ -55,7 +55,7 @@ function keyPadInput(targetKey){
   else if(targetKey.classList.contains('submit-btn') && generatePin.value.length > 0){
     verifyUserInput();
   }
-};
+}
 
 function verifyUserInput(){
   if (displayInput.value == generatePin.value) {
@@ -82,6 +82,4 @@ function resetStage(){
   generatePin.value = '';
   displayInput.value = '';
   submitBtn.disabled = true;
-  
-  
 }
